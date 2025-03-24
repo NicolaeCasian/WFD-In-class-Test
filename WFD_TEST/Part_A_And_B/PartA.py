@@ -50,12 +50,10 @@ class ChildVehicle(Vehicle):
     def update_owners(self, owners):
         if isinstance(owners, (list, str)):  
             self.owners = owners
-        else:
-            raise TypeError("Owners must be a list or string")
 
 # Task A8: Creating instances to test
-vehicle = Vehicle("Honda", 2010, 180, 120000, "Blue")
-child_vehicle = ChildVehicle("Tesla", 2022, 200, 30000, "White", ["Alice", "Bob"])
+vehicle = Vehicle("BMW", 2010, 180, 120900, "Blue")
+child_vehicle = ChildVehicle("Mercedes", 2022, 200, 10000, "White", ["Nico", "Girish"])
 
 # Task A9: Call the methods to print attributes
 print("A9: Vehicle from main class")
@@ -74,7 +72,7 @@ vehicle.update_mileage(140000)
 vehicle.update_colour("Black")
 
 # Update methods for attributes in the child class
-child_vehicle.update_owners(["Alice", "Charlie"])
+child_vehicle.update_owners(["Stanley", "Akosh"])
 
 # Print updated attributes
 print("\nUpdated Attributes of the Vehicle class: ")
